@@ -15,6 +15,14 @@ public class StatManager : MonoBehaviour
     private TMP_Text moneyText;
     [SerializeField]
     private TMP_Text unemploymentText;
+    //[SerializeField]
+    //private CityManager cityManager;
+    [SerializeField]
+    private GameObject firewall;
+    [SerializeField]
+    private Transform firewallVisPos;
+    [SerializeField]
+    private Transform firewallInvisPos;
 
     private void Awake()
     {
@@ -36,6 +44,17 @@ public class StatManager : MonoBehaviour
 
     void Update()
     {
+        //check if press yes or no
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            changeMoney(10);
+            changeUnemployment(10);
+        }
+        else if (Input.GetKeyDown(KeyCode.N))
+        {
+            changeMoney(-10);
+            changeUnemployment(-10);
+        }
     }
 
     public void changeMoney(float newMoney)
@@ -60,6 +79,13 @@ public class StatManager : MonoBehaviour
         {
             SceneManager.LoadScene("Lose");
         }
+        else if (unemployment > 60)
+        {
+            moveToVisPos(firewall.transform, firewallVisPos);
+        } else if (unemployment < 40)
+        {
+            movetoInvisPos(firewall.transform, firewallInvisPos);
+        }
         unemploymentText.text = "Unemployment% :" + unemployment;
     }
 
@@ -68,4 +94,13 @@ public class StatManager : MonoBehaviour
         return unemployment;
     }
 
+    public void moveToVisPos(Transform obj, Transform visPos)
+    {
+        obj.position = visPos.position;
+    }
+
+    public void movetoInvisPos(Transform obj, Transform invisPos)
+    {
+        obj.position = invisPos.position;
+    }
 }
