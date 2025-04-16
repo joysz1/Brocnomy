@@ -1,0 +1,384 @@
+{
+    "decisions": [
+        {
+            "questionText": "Switch to solar power in all facilities or stick with coal?",
+            "choices": [
+                {
+                    "choiceText": "Eco-friendly option: Switch to solar power",
+                    "profitChange": -30000,
+                    "populationChange": 200000000,
+                    "pollutionChange": -80,
+                    "stockChange": 100
+                },
+                {
+                    "choiceText": "Profit-first option: Stick with coal",
+                    "profitChange": 60000,
+                    "populationChange": -100000000,
+                    "pollutionChange": 60,
+                    "stockChange": 300
+                }
+            ]
+        },
+        {
+            "questionText": "Ban plastic packaging company-wide or continue current practices?",
+            "choices": [
+                {
+                    "choiceText": "Eco-friendly option: Ban plastic packaging",
+                    "profitChange": -20000,
+                    "populationChange": 200000000,
+                    "pollutionChange": -70,
+                    "stockChange": 100
+                },
+                {
+                    "choiceText": "Profit-first option: Continue current practices",
+                    "profitChange": 70000,
+                    "populationChange": -100000000,
+                    "pollutionChange": 70,
+                    "stockChange": 300
+                }
+            ]
+        },
+        {
+            "questionText": "Invest in biodegradable tech or double down on electronics?",
+            "choices": [
+                {
+                    "choiceText": "Eco-friendly option: Invest in biodegradable tech",
+                    "profitChange": -30000,
+                    "populationChange": 200000000,
+                    "pollutionChange": -60,
+                    "stockChange": 100
+                },
+                {
+                    "choiceText": "Profit-first option: Double down on electronics",
+                    "profitChange": 60000,
+                    "populationChange": -100000000,
+                    "pollutionChange": 80,
+                    "stockChange": 300
+                }
+            ]
+        },
+        {
+            "questionText": "Fund tree-planting in developing countries or build new factories?",
+            "choices": [
+                {
+                    "choiceText": "Eco-friendly option: Fund tree-planting",
+                    "profitChange": -20000,
+                    "populationChange": 200000000,
+                    "pollutionChange": -70,
+                    "stockChange": 100
+                },
+                {
+                    "choiceText": "Profit-first option: Build new factories",
+                    "profitChange": 80000,
+                    "populationChange": -100000000,
+                    "pollutionChange": 60,
+                    "stockChange": 300
+                }
+            ]
+        },
+        {
+            "questionText": "Use recycled materials for all products or go for cheapest option?",
+            "choices": [
+                {
+                    "choiceText": "Eco-friendly option: Use recycled materials",
+                    "profitChange": -30000,
+                    "populationChange": 200000000,
+                    "pollutionChange": -50,
+                    "stockChange": 100
+                },
+                {
+                    "choiceText": "Profit-first option: Use cheapest materials",
+                    "profitChange": 60000,
+                    "populationChange": -100000000,
+                    "pollutionChange": 90,
+                    "stockChange": 300
+                }
+            ]
+        },
+        {
+            "questionText": "Redesign delivery to be carbon-neutral or use standard logistics?",
+            "choices": [
+                {
+                    "choiceText": "Eco-friendly option: Carbon-neutral delivery",
+                    "profitChange": -20000,
+                    "populationChange": 200000000,
+                    "pollutionChange": -60,
+                    "stockChange": 100
+                },
+                {
+                    "choiceText": "Profit-first option: Standard logistics",
+                    "profitChange": 70000,
+                    "populationChange": -100000000,
+                    "pollutionChange": 60,
+                    "stockChange": 300
+                }
+            ]
+        },
+        {
+            "questionText": "Install green roofing and gardens or maximize rooftop for solar gain?",
+            "choices": [
+                {
+                    "choiceText": "Eco-friendly option: Green roofing and gardens",
+                    "profitChange": -30000,
+                    "populationChange": 200000000,
+                    "pollutionChange": -80,
+                    "stockChange": 100
+                },
+                {
+                    "choiceText": "Profit-first option: Maximize solar gain",
+                    "profitChange": 60000,
+                    "populationChange": -100000000,
+                    "pollutionChange": 60,
+                    "stockChange": 300
+                }
+            ]
+        },
+        {
+            "questionText": "Sponsor public transit cards or give staff free parking passes?",
+            "choices": [
+                {
+                    "choiceText": "Eco-friendly option: Sponsor transit cards",
+                    "profitChange": -20000,
+                    "populationChange": 200000000,
+                    "pollutionChange": -70,
+                    "stockChange": 100
+                },
+                {
+                    "choiceText": "Profit-first option: Free parking passes",
+                    "profitChange": 70000,
+                    "populationChange": -100000000,
+                    "pollutionChange": 60,
+                    "stockChange": 300
+                }
+            ]
+        },
+        {
+            "questionText": "Shut down polluting plants or run them at night only?",
+            "choices": [
+                {
+                    "choiceText": "Eco-friendly option: Shut down plants",
+                    "profitChange": -30000,
+                    "populationChange": 200000000,
+                    "pollutionChange": -60,
+                    "stockChange": 100
+                },
+                {
+                    "choiceText": "Profit-first option: Run at night",
+                    "profitChange": 60000,
+                    "populationChange": -100000000,
+                    "pollutionChange": 90,
+                    "stockChange": 300
+                }
+            ]
+        },
+        {
+            "questionText": "Switch to eco-friendly servers or expand data centers as-is?",
+            "choices": [
+                {
+                    "choiceText": "Eco-friendly option: Switch to eco-servers",
+                    "profitChange": -20000,
+                    "populationChange": 200000000,
+                    "pollutionChange": -70,
+                    "stockChange": 100
+                },
+                {
+                    "choiceText": "Profit-first option: Expand current data centers",
+                    "profitChange": 70000,
+                    "populationChange": -100000000,
+                    "pollutionChange": 60,
+                    "stockChange": 300
+                }
+            ]
+        },
+        {
+            "questionText": "Launch AI education tool or sell emotion-tracking software?",
+            "choices": [
+                {
+                    "choiceText": "Ethical path: Launch education tool",
+                    "profitChange": -20000,
+                    "populationChange": 400000000,
+                    "pollutionChange": -10,
+                    "stockChange": 0
+                },
+                {
+                    "choiceText": "Aggressive growth: Sell tracking software",
+                    "profitChange": 50000,
+                    "populationChange": -200000000,
+                    "pollutionChange": 20,
+                    "stockChange": 400
+                }
+            ]
+        },
+        {
+            "questionText": "Build affordable housing or open foreign HQ?",
+            "choices": [
+                {
+                    "choiceText": "Ethical path: Build affordable housing",
+                    "profitChange": -10000,
+                    "populationChange": 400000000,
+                    "pollutionChange": -10,
+                    "stockChange": 0
+                },
+                {
+                    "choiceText": "Aggressive growth: Open foreign HQ",
+                    "profitChange": 60000,
+                    "populationChange": -200000000,
+                    "pollutionChange": 20,
+                    "stockChange": 400
+                }
+            ]
+        },
+        {
+            "questionText": "Create scholarship fund or increase dividends?",
+            "choices": [
+                {
+                    "choiceText": "Ethical path: Create scholarship fund",
+                    "profitChange": -20000,
+                    "populationChange": 400000000,
+                    "pollutionChange": -10,
+                    "stockChange": 0
+                },
+                {
+                    "choiceText": "Aggressive growth: Increase dividends",
+                    "profitChange": 50000,
+                    "populationChange": -200000000,
+                    "pollutionChange": 20,
+                    "stockChange": 400
+                }
+            ]
+        },
+        {
+            "questionText": "Start healthcare initiative or expand into pharma?",
+            "choices": [
+                {
+                    "choiceText": "Ethical path: Start healthcare initiative",
+                    "profitChange": -10000,
+                    "populationChange": 400000000,
+                    "pollutionChange": -10,
+                    "stockChange": 0
+                },
+                {
+                    "choiceText": "Aggressive growth: Expand into pharma",
+                    "profitChange": 60000,
+                    "populationChange": -200000000,
+                    "pollutionChange": 20,
+                    "stockChange": 400
+                }
+            ]
+        },
+        {
+            "questionText": "Create mindfulness app or new addictive mobile game?",
+            "choices": [
+                {
+                    "choiceText": "Ethical path: Create mindfulness app",
+                    "profitChange": -20000,
+                    "populationChange": 400000000,
+                    "pollutionChange": -10,
+                    "stockChange": 0
+                },
+                {
+                    "choiceText": "Aggressive growth: Create addictive game",
+                    "profitChange": 50000,
+                    "populationChange": -200000000,
+                    "pollutionChange": 20,
+                    "stockChange": 400
+                }
+            ]
+        },
+        {
+            "questionText": "Offer stock to all staff or exec bonuses?",
+            "choices": [
+                {
+                    "choiceText": "Ethical path: Offer stock to all staff",
+                    "profitChange": -10000,
+                    "populationChange": 400000000,
+                    "pollutionChange": -10,
+                    "stockChange": 0
+                },
+                {
+                    "choiceText": "Aggressive growth: Give exec bonuses",
+                    "profitChange": 60000,
+                    "populationChange": -200000000,
+                    "pollutionChange": 20,
+                    "stockChange": 400
+                }
+            ]
+        },
+        {
+            "questionText": "Install nap pods or 14-hour workdays?",
+            "choices": [
+                {
+                    "choiceText": "Ethical path: Install nap pods",
+                    "profitChange": -20000,
+                    "populationChange": 400000000,
+                    "pollutionChange": -10,
+                    "stockChange": 0
+                },
+                {
+                    "choiceText": "Aggressive growth: Implement 14-hour workdays",
+                    "profitChange": 50000,
+                    "populationChange": -200000000,
+                    "pollutionChange": 20,
+                    "stockChange": 400
+                }
+            ]
+        },
+        {
+            "questionText": "Build encryption or expand ad tracking?",
+            "choices": [
+                {
+                    "choiceText": "Ethical path: Build encryption",
+                    "profitChange": -10000,
+                    "populationChange": 400000000,
+                    "pollutionChange": -10,
+                    "stockChange": 0
+                },
+                {
+                    "choiceText": "Aggressive growth: Expand ad tracking",
+                    "profitChange": 60000,
+                    "populationChange": -200000000,
+                    "pollutionChange": 20,
+                    "stockChange": 400
+                }
+            ]
+        },
+        {
+            "questionText": "Offer job training or automate outreach?",
+            "choices": [
+                {
+                    "choiceText": "Ethical path: Offer job training",
+                    "profitChange": -20000,
+                    "populationChange": 400000000,
+                    "pollutionChange": -10,
+                    "stockChange": 0
+                },
+                {
+                    "choiceText": "Aggressive growth: Automate outreach",
+                    "profitChange": 50000,
+                    "populationChange": -200000000,
+                    "pollutionChange": 20,
+                    "stockChange": 400
+                }
+            ]
+        },
+        {
+            "questionText": "Invest in clean energy or buy coal futures?",
+            "choices": [
+                {
+                    "choiceText": "Ethical path: Invest in clean energy",
+                    "profitChange": -10000,
+                    "populationChange": 400000000,
+                    "pollutionChange": -10,
+                    "stockChange": 0
+                },
+                {
+                    "choiceText": "Aggressive growth: Buy coal futures",
+                    "profitChange": 60000,
+                    "populationChange": -200000000,
+                    "pollutionChange": 20,
+                    "stockChange": 400
+                }
+            ]
+        }
+    ]
+} 

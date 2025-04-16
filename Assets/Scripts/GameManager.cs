@@ -1,29 +1,57 @@
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
+    public static GameManager Instance { get; private set; }
+
+    [SerializeField] private DecisionDatabase decisionDatabase;
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
     }
 
-    private void Update()
+    private void Start()
     {
-        if (Input.GetKey(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
+        InitializeGame();
     }
 
-}
+    private void InitializeGame()
+    {
+        // Ensure all managers are properly initialized
+        if (UIManager.Instance == null)
+        {
+            GameObject uiManager = new GameObject("UIManager");
+            uiManager.AddComponent<UIManager>();
+        }
+
+        if (WorldStateManager.Instance == null)
+        {
+            GameObject worldStateManager = new GameObject("WorldStateManager");
+            worldStateManager.AddComponent<WorldStateManager>();
+        }
+
+        if (DecisionManager.Instance == null)
+        {
+            GameObject decisionManager = new GameObject("DecisionManager");
+            decisionManager.AddComponent<DecisionManager>();
+        }
+
+        // Reset the game state
+        WorldStateManager.Instance.ResetGame();
+        DecisionManager.Instance.ResetDecisions();
+    }
+
+    public void ResetGame()
+    {
+        InitializeGame();
+    }
+} 
