@@ -32,10 +32,10 @@ public class WorldStateManager : MonoBehaviour
     private const float CHAOS_POPULATION_THRESHOLD = 2000000000f;
     private const float CHAOS_STOCK_THRESHOLD = 3000f;
 
-    private const float UTOPIA_PROFIT_THRESHOLD = 850000f;
-    private const float UTOPIA_POPULATION_THRESHOLD = 7000000000f;
+    private const float UTOPIA_PROFIT_THRESHOLD = 85000f;
+    private const float UTOPIA_POPULATION_THRESHOLD = 6000000000f;
     private const float UTOPIA_POLLUTION_THRESHOLD = 20f;
-    private const float UTOPIA_STOCK_THRESHOLD = 6000f;
+    private const float UTOPIA_STOCK_THRESHOLD = 5000f;
 
     private int utopiaTurns = 0;
     private const int UTOPIA_TURNS_REQUIRED = 5;
@@ -104,7 +104,7 @@ public class WorldStateManager : MonoBehaviour
             StockMarket < CHAOS_STOCK_THRESHOLD)
         {
             Debug.Log("Chaotic State");
-
+            UIManager.Instance.SetChaotic();
             state = 0;
             return WorldState.Chaotic;
         }
@@ -120,6 +120,7 @@ public class WorldStateManager : MonoBehaviour
             {
                 OnGameEnded?.Invoke(true);
             }
+            UIManager.Instance.SetUtopian();
             state = 2;
             return WorldState.Utopian;
         }
@@ -131,6 +132,7 @@ public class WorldStateManager : MonoBehaviour
         // Default to Neutral state
 
         Debug.Log("Neutral State");
+        UIManager.Instance.SetNeutral();
         state = 1;
         return WorldState.Neutral;
     }

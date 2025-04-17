@@ -26,18 +26,24 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI endGameText;
     */
     [SerializeField]
-    private GameObject buttonOne;
+    private Material chaoticSkybox;
     [SerializeField]
-    private GameObject buttonTwo;
-
-    private Slider profitSlider;
-    private Slider populationSlider;
-    private Slider pollutionSlider;
-    private Slider stockSlider;
+    private GameObject chaoticCity;
+    [SerializeField]
+    private Material neutralSkybox;
+    [SerializeField] 
+    private GameObject neutralCity;
+    [SerializeField]
+    private Material utopianSkybox;
+    [SerializeField]
+    private GameObject utopianCity;
+    [SerializeField]
+    private GameObject cityActivePos;
+    [SerializeField]
+    private GameObject cityInactivePos;
 
     private GameObject decisionPanel;
     private TextMeshProUGUI questionText;
-    private Button[] choiceButtons = new Button[2];
     private TextMeshProUGUI[] choiceButtonTexts = new TextMeshProUGUI[2];
 
     private TextMeshProUGUI profitText;
@@ -65,23 +71,24 @@ public class UIManager : MonoBehaviour
     {
         // Subscribe to events
         //GameObject newMonitor = Instantiate(monitor);
+        chaoticCity = Instantiate(chaoticCity);
+        chaoticCity.transform.position = cityInactivePos.transform.position;
+        neutralCity = Instantiate(neutralCity);
+        utopianCity = Instantiate(utopianCity);
+        utopianCity.transform.position = cityInactivePos.transform.position;
+
+        RenderSettings.skybox = neutralSkybox;
 
         WorldStateManager.Instance.OnWorldStateChanged += UpdateOfficeBackground;
         WorldStateManager.Instance.OnGameEnded += ShowEndGameScreen;
         DecisionManager.Instance.OnDecisionPresented += ShowDecision;
         DecisionManager.Instance.OnDecisionsComplete += OnDecisionsComplete;
 
-        profitSlider = GameObject.Find("Profit").gameObject.GetComponent<Slider>();
-        populationSlider = GameObject.Find("Population").gameObject.GetComponent<Slider>();
-        pollutionSlider = GameObject.Find("Pollution").gameObject.GetComponent<Slider>();
-        stockSlider = GameObject.Find("Stock").gameObject.GetComponent<Slider>();
         decisionPanel = GameObject.Find("DecisionPanel").gameObject;
         questionText = GameObject.Find("QuestionText").gameObject.GetComponent<TextMeshProUGUI>();
-        choiceButtons[0] = GameObject.Find("Button1").gameObject.GetComponent<Button>();
         choiceButtonTexts[0] = GameObject.Find("Button1Text").gameObject.GetComponent<TextMeshProUGUI>();
         //choiceButtons[1] = GameObject.Find("Button3").gameObject.GetComponent<Button>();
         //choiceButtonTexts[1] = GameObject.Find("Button3Text").gameObject.GetComponent<TextMeshProUGUI>();
-        choiceButtons[1] = GameObject.Find("Button2").gameObject.GetComponent<Button>();
         choiceButtonTexts[1] = GameObject.Find("Button2Text").gameObject.GetComponent<TextMeshProUGUI>();
         profitText = GameObject.Find("ProfitCounter").gameObject.GetComponent<TextMeshProUGUI>();
         populationText = GameObject.Find("PopulationCounter").gameObject.GetComponent<TextMeshProUGUI>();
@@ -107,13 +114,9 @@ public class UIManager : MonoBehaviour
 
     private void UpdateVariableDisplays()
     {
-        profitSlider.value = WorldStateManager.Instance.CompanyProfit / 1000000f; // Normalize to 0-1
         profitText.text = (WorldStateManager.Instance.CompanyProfit.ToString());
-        populationSlider.value = WorldStateManager.Instance.Population / 10000000000f; // Normalize to 0-1
         populationText.text = (WorldStateManager.Instance.Population.ToString("0." + new string('#', 339)));
-        pollutionSlider.value = WorldStateManager.Instance.Pollution / 100f;
         pollutionText.text = (WorldStateManager.Instance.Pollution.ToString() + "%");
-        stockSlider.value = WorldStateManager.Instance.StockMarket / 10000f; // Normalize to 0-1
         stockText.text = (WorldStateManager.Instance.StockMarket.ToString());
     }
 
@@ -123,7 +126,7 @@ public class UIManager : MonoBehaviour
         decisionPanel.SetActive(true);
         questionText.text = decision.questionText;
 
-        for (int i = 0; i < choiceButtons.Length; i++)
+        for (int i = 0; i < choiceButtonTexts.Length; i++)
         {
             if (i < decision.choices.Length)
             {
@@ -191,5 +194,29 @@ public class UIManager : MonoBehaviour
             DecisionManager.Instance.OnDecisionPresented -= ShowDecision;
             DecisionManager.Instance.OnDecisionsComplete -= OnDecisionsComplete;
         }
+    }
+
+    public void SetChaotic()
+    {
+        chaoticCity.transform.position = cityActivePos.transform.position;
+        neutralCity.transform.position = cityInactivePos.transform.position;
+        utopianCity.transform.position = cityInactivePos.transform.position;
+        RenderSettings.skybox = chaoticSkybox;
+    }
+
+    public void SetNeutral()
+    {
+        chaoticCity.transform.position = cityInactivePos.transform.position;
+        neutralCity.transform.position = cityActivePos.transform.position;
+        utopianCity.transform.position = cityInactivePos.transform.position;
+        RenderSettings.skybox = neutralSkybox;
+    }
+
+    public void SetUtopian()
+    {
+        chaoticCity.transform.position = cityInactivePos.transform.position;
+        neutralCity.transform.position = cityInactivePos.transform.position;
+        utopianCity.transform.position = cityActivePos.transform.position;
+        RenderSettings.skybox = utopianSkybox;
     }
 } 
