@@ -35,12 +35,14 @@ public class WorldStateManager : MonoBehaviour
     private const float UTOPIA_PROFIT_THRESHOLD = 850000f;
     private const float UTOPIA_POPULATION_THRESHOLD = 7000000000f;
     private const float UTOPIA_POLLUTION_THRESHOLD = 20f;
-    private const float UTOPIA_STOCK_THRESHOLD = 9000f;
+    private const float UTOPIA_STOCK_THRESHOLD = 6000f;
 
     private int utopiaTurns = 0;
     private const int UTOPIA_TURNS_REQUIRED = 5;
     private int totalTurns = 0;
     private const int TOTAL_QUESTIONS = 20;
+
+    public int state { get; set; }
 
     public WorldState CurrentWorldState { get; private set; }
 
@@ -101,6 +103,9 @@ public class WorldStateManager : MonoBehaviour
             Population < CHAOS_POPULATION_THRESHOLD ||
             StockMarket < CHAOS_STOCK_THRESHOLD)
         {
+            Debug.Log("Chaotic State");
+
+            state = 0;
             return WorldState.Chaotic;
         }
 
@@ -115,6 +120,7 @@ public class WorldStateManager : MonoBehaviour
             {
                 OnGameEnded?.Invoke(true);
             }
+            state = 2;
             return WorldState.Utopian;
         }
         else
@@ -123,6 +129,9 @@ public class WorldStateManager : MonoBehaviour
         }
 
         // Default to Neutral state
+
+        Debug.Log("Neutral State");
+        state = 1;
         return WorldState.Neutral;
     }
 
@@ -131,7 +140,7 @@ public class WorldStateManager : MonoBehaviour
         // Check for Bad Ending
         if ((Pollution > 90f && Population < 1000000000f) || StockMarket < 2500f)
         {
-            OnGameEnded?.Invoke(false);
+            OnGameEnded?.Invoke(true);
             return;
         }
 
@@ -145,12 +154,12 @@ public class WorldStateManager : MonoBehaviour
             }
             else if (CurrentWorldState == WorldState.Chaotic)
             {
-                OnGameEnded?.Invoke(false);
+                OnGameEnded?.Invoke(true);
             }
             else
             {
                 // Neutral ending
-                OnGameEnded?.Invoke(false);
+                OnGameEnded?.Invoke(true);
             }
         }
     }

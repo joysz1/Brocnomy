@@ -25,14 +25,10 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject endGamePanel;
     [SerializeField] private TextMeshProUGUI endGameText;
     */
-
-    [Header("Office Background")]
-    [SerializeField] private Image officeBackground;
-    [SerializeField] private Sprite neutralOffice;
-    [SerializeField] private Sprite chaoticOffice;
-    [SerializeField] private Sprite utopianOffice;
-
-    [SerializeField] private GameObject monitor;
+    [SerializeField]
+    private GameObject buttonOne;
+    [SerializeField]
+    private GameObject buttonTwo;
 
     private Slider profitSlider;
     private Slider populationSlider;
@@ -41,8 +37,13 @@ public class UIManager : MonoBehaviour
 
     private GameObject decisionPanel;
     private TextMeshProUGUI questionText;
-    private Button[] choiceButtons = new Button[3];
-    private TextMeshProUGUI[] choiceButtonTexts = new TextMeshProUGUI[3];
+    private Button[] choiceButtons = new Button[2];
+    private TextMeshProUGUI[] choiceButtonTexts = new TextMeshProUGUI[2];
+
+    private TextMeshProUGUI profitText;
+    private TextMeshProUGUI populationText;
+    private TextMeshProUGUI pollutionText;
+    private TextMeshProUGUI stockText;
 
     private GameObject endGamePanel;
     private TextMeshProUGUI endGameText;
@@ -63,7 +64,7 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         // Subscribe to events
-        GameObject newMonitor = Instantiate(monitor);
+        //GameObject newMonitor = Instantiate(monitor);
 
         WorldStateManager.Instance.OnWorldStateChanged += UpdateOfficeBackground;
         WorldStateManager.Instance.OnGameEnded += ShowEndGameScreen;
@@ -78,10 +79,15 @@ public class UIManager : MonoBehaviour
         questionText = GameObject.Find("QuestionText").gameObject.GetComponent<TextMeshProUGUI>();
         choiceButtons[0] = GameObject.Find("Button1").gameObject.GetComponent<Button>();
         choiceButtonTexts[0] = GameObject.Find("Button1Text").gameObject.GetComponent<TextMeshProUGUI>();
-        choiceButtons[1] = GameObject.Find("Button3").gameObject.GetComponent<Button>();
-        choiceButtonTexts[1] = GameObject.Find("Button3Text").gameObject.GetComponent<TextMeshProUGUI>();
-        choiceButtons[2] = GameObject.Find("Button2").gameObject.GetComponent<Button>();
-        choiceButtonTexts[2] = GameObject.Find("Button2Text").gameObject.GetComponent<TextMeshProUGUI>();
+        //choiceButtons[1] = GameObject.Find("Button3").gameObject.GetComponent<Button>();
+        //choiceButtonTexts[1] = GameObject.Find("Button3Text").gameObject.GetComponent<TextMeshProUGUI>();
+        choiceButtons[1] = GameObject.Find("Button2").gameObject.GetComponent<Button>();
+        choiceButtonTexts[1] = GameObject.Find("Button2Text").gameObject.GetComponent<TextMeshProUGUI>();
+        profitText = GameObject.Find("ProfitCounter").gameObject.GetComponent<TextMeshProUGUI>();
+        populationText = GameObject.Find("PopulationCounter").gameObject.GetComponent<TextMeshProUGUI>();
+        pollutionText = GameObject.Find("PollutionCounter").gameObject.GetComponent<TextMeshProUGUI>();
+        stockText = GameObject.Find("StockCounter").gameObject.GetComponent<TextMeshProUGUI>();
+
         endGamePanel = GameObject.Find("EndgamePanel").gameObject;
         endGameText = GameObject.Find("EndgameText").gameObject.GetComponent<TextMeshProUGUI>();
 
@@ -102,9 +108,13 @@ public class UIManager : MonoBehaviour
     private void UpdateVariableDisplays()
     {
         profitSlider.value = WorldStateManager.Instance.CompanyProfit / 1000000f; // Normalize to 0-1
+        profitText.text = (WorldStateManager.Instance.CompanyProfit.ToString());
         populationSlider.value = WorldStateManager.Instance.Population / 10000000000f; // Normalize to 0-1
+        populationText.text = (WorldStateManager.Instance.Population.ToString("0." + new string('#', 339)));
         pollutionSlider.value = WorldStateManager.Instance.Pollution / 100f;
+        pollutionText.text = (WorldStateManager.Instance.Pollution.ToString() + "%");
         stockSlider.value = WorldStateManager.Instance.StockMarket / 10000f; // Normalize to 0-1
+        stockText.text = (WorldStateManager.Instance.StockMarket.ToString());
     }
 
     private void ShowDecision(Decision decision)
@@ -117,30 +127,21 @@ public class UIManager : MonoBehaviour
         {
             if (i < decision.choices.Length)
             {
-                choiceButtons[i].gameObject.SetActive(true);
                 choiceButtonTexts[i].text = decision.choices[i].choiceText;
-
-                int choiceIndex = i; // Capture the index for the lambda
-                choiceButtons[i].onClick.RemoveAllListeners();
-                choiceButtons[i].onClick.AddListener(() => OnChoiceSelected(choiceIndex));
-            }
-            else
-            {
-                choiceButtons[i].gameObject.SetActive(false);
+                
             }
         }
     }
 
-    private void OnChoiceSelected(int choiceIndex)
+    public void SetDecisionPanelInactive()
     {
         decisionPanel.SetActive(false);
-        DecisionManager.Instance.MakeChoice(choiceIndex);
     }
 
     private void UpdateOfficeBackground(WorldState newState)
     {
         /*
-        switch (newState)
+        sitch (newState)
         {
             case WorldState.Neutral:
                 officeBackground.sprite = neutralOffice;
@@ -155,12 +156,20 @@ public class UIManager : MonoBehaviour
         */
     }
 
-    private void ShowEndGameScreen(bool isGoodEnding)
+    private void ShowEndGameScreen(bool dummy)
     {
+        int state = WorldStateManager.Instance.state;
         endGamePanel.SetActive(true);
-        endGameText.text = isGoodEnding ? 
-            "Congratulations! You've created a Utopian future!" : 
-            "Game Over! The world has fallen into chaos...";
+        if (state == 0)
+        {
+            endGameText.text = "Game Over! The world has fallen into chaos... but at least you're rich!";
+        } else if (state == 1)
+        {
+            endGameText.text = "Game Over! The world is okay, but your company isn't doing great...";
+        } else
+        {
+            endGameText.text = "Congratulations! You've created a Utopian future!";
+        }
     }
 
     private void OnDecisionsComplete()
