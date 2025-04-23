@@ -4,14 +4,14 @@
             "questionText": "Your AI data centers are melting the Arctic. Polar bears are using servers as hot tubs. What's your move?",
             "choices": [
                 {
-                    "choiceText": "Ethical path: Switch to hamster-powered servers",
+                    "choiceText": "Switch to hamster-powered servers",
                     "profitChange": -15000,
                     "populationChange": 50000000,
                     "pollutionChange": -20,
                     "stockChange": 25
                 },
                 {
-                    "choiceText": "Profit-first option: Sell 'Polar Bear Spa' memberships",
+                    "choiceText": "Sell 'Polar Bear Spa' memberships",
                     "profitChange": 30000,
                     "populationChange": -25000000,
                     "pollutionChange": 15,
@@ -23,14 +23,14 @@
             "questionText": "Your Smart City's e-waste mountain is so big, squirrels are using motherboards as nests. How do you handle this?",
             "choices": [
                 {
-                    "choiceText": "Eco-friendly option: Build squirrel-friendly recycling centers",
+                    "choiceText": "Build squirrel-friendly recycling centers",
                     "profitChange": -12000,
                     "populationChange": 50000000,
                     "pollutionChange": -18,
                     "stockChange": 25
                 },
                 {
-                    "choiceText": "Aggressive growth: Sell 'Tech Graveyard' tourism packages",
+                    "choiceText": "Sell 'Tech Graveyard' tourism packages",
                     "profitChange": 28000,
                     "populationChange": -25000000,
                     "pollutionChange": 18,
@@ -42,14 +42,14 @@
             "questionText": "Your Smart Fridge factory fumes are making pigeons glow in the dark. What's your strategy?",
             "choices": [
                 {
-                    "choiceText": "Ethical path: Install air filters",
+                    "choiceText": "Install air filters",
                     "profitChange": -15000,
                     "populationChange": 50000000,
                     "pollutionChange": -15,
                     "stockChange": 25
                 },
                 {
-                    "choiceText": "Aggressive growth: Sell 'Glow Pigeon' tours",
+                    "choiceText": "Sell 'Glow Pigeon' tours",
                     "profitChange": 30000,
                     "populationChange": -25000000,
                     "pollutionChange": 20,
@@ -61,14 +61,14 @@
             "questionText": "Your VR headsets are filling the ocean. Fish are wearing them as hats. How do you handle this?",
             "choices": [
                 {
-                    "choiceText": "Eco-friendly option: Make biodegradable headsets",
+                    "choiceText": "Make biodegradable headsets",
                     "profitChange": -12000,
                     "populationChange": 50000000,
                     "pollutionChange": -18,
                     "stockChange": 25
                 },
                 {
-                    "choiceText": "Aggressive growth: Sell 'Fish VR' subscriptions",
+                    "choiceText": "Sell 'Fish VR' subscriptions",
                     "profitChange": 30000,
                     "populationChange": -25000000,
                     "pollutionChange": 15,
@@ -80,14 +80,14 @@
             "questionText": "Your Smart Toilet factory is polluting the river. Fish have WiFi now. What's your response?",
             "choices": [
                 {
-                    "choiceText": "Ethical path: Clean the river",
+                    "choiceText": "Clean the river",
                     "profitChange": -15000,
                     "populationChange": 50000000,
                     "pollutionChange": -13,
                     "stockChange": 25
                 },
                 {
-                    "choiceText": "Aggressive growth: Sell 'Tweeting Fish' merchandise",
+                    "choiceText": "Sell 'Tweeting Fish' merchandise",
                     "profitChange": 30000,
                     "populationChange": -25000000,
                     "pollutionChange": 23,
@@ -99,14 +99,14 @@
             "questionText": "Your Smart Home is using hamster power. The carbon footprint is visible from space. How do you fix this?",
             "choices": [
                 {
-                    "choiceText": "Eco-friendly option: Switch to solar power",
+                    "choiceText": "Switch to solar power",
                     "profitChange": -12000,
                     "populationChange": 50000000,
                     "pollutionChange": -15,
                     "stockChange": 25
                 },
                 {
-                    "choiceText": "Aggressive growth: Sell 'Hamster Power' energy drinks",
+                    "choiceText": "Sell 'Hamster Power' energy drinks",
                     "profitChange": 28000,
                     "populationChange": -25000000,
                     "pollutionChange": 15,
@@ -118,14 +118,14 @@
             "questionText": "Your Smart Pet Feeder batteries formed a mountain. Goats are using them as slides. What's your plan?",
             "choices": [
                 {
-                    "choiceText": "Ethical path: Switch to solar power",
+                    "choiceText": "Switch to solar power",
                     "profitChange": -15000,
                     "populationChange": 50000000,
                     "pollutionChange": -20,
                     "stockChange": 25
                 },
                 {
-                    "choiceText": "Aggressive growth: Sell 'Battery Mountain' theme park tickets",
+                    "choiceText": "Sell 'Battery Mountain' theme park tickets",
                     "profitChange": 30000,
                     "populationChange": -25000000,
                     "pollutionChange": 15,
@@ -137,14 +137,14 @@
             "questionText": "Your Smart Mirror factory smoke is blocking the sun. What's your move?",
             "choices": [
                 {
-                    "choiceText": "Ethical path: Install air filters",
+                    "choiceText": "Install air filters",
                     "profitChange": -12000,
                     "populationChange": 50000000,
                     "pollutionChange": -18,
                     "stockChange": 25
                 },
                 {
-                    "choiceText": "Aggressive growth: Sell 'Smoke Cloud' bottled air",
+                    "choiceText": "Sell 'Smoke Cloud' bottled air",
                     "profitChange": 28000,
                     "populationChange": -25000000,
                     "pollutionChange": 15,
@@ -156,14 +156,14 @@
             "questionText": "Your Smart Plant Pot production is causing deforestation. Trees want better conditions. How do you respond?",
             "choices": [
                 {
-                    "choiceText": "Ethical path: Plant new trees",
+                    "choiceText": "Plant new trees",
                     "profitChange": -15000,
                     "populationChange": 50000000,
                     "pollutionChange": -15,
                     "stockChange": 25
                 },
                 {
-                    "choiceText": "Aggressive growth: Sell 'Tree Union' merchandise",
+                    "choiceText": "Sell 'Tree Union' merchandise",
                     "profitChange": 30000,
                     "populationChange": -25000000,
                     "pollutionChange": 23,
@@ -175,14 +175,14 @@
             "questionText": "Your Smart Coffee Maker pods formed a new continent. Penguins are using them as igloos. What's your plan?",
             "choices": [
                 {
-                    "choiceText": "Ethical path: Switch to biodegradable pods",
+                    "choiceText": "Switch to biodegradable pods",
                     "profitChange": -12000,
                     "populationChange": 50000000,
                     "pollutionChange": -18,
                     "stockChange": 25
                 },
                 {
-                    "choiceText": "Aggressive growth: Sell 'Pod Continent' real estate",
+                    "choiceText": "Sell 'Pod Continent' real estate",
                     "profitChange": 28000,
                     "populationChange": -25000000,
                     "pollutionChange": 15,
@@ -194,14 +194,14 @@
             "questionText": "Your Smart Toothbrush is polluting the river. Fish are brushing their teeth. How do you handle this?",
             "choices": [
                 {
-                    "choiceText": "Ethical path: Clean the river",
+                    "choiceText": "Clean the river",
                     "profitChange": -8000,
                     "populationChange": 100000000,
                     "pollutionChange": -8,
                     "stockChange": 12
                 },
                 {
-                    "choiceText": "Aggressive growth: Sell 'Fish Dental' insurance",
+                    "choiceText": "Sell 'Fish Dental' insurance",
                     "profitChange": 20000,
                     "populationChange": -50000000,
                     "pollutionChange": 8,
@@ -213,14 +213,14 @@
             "questionText": "Your Smart Socks factory is coloring birds rainbow. How do you handle this?",
             "choices": [
                 {
-                    "choiceText": "Ethical path: Use natural dyes",
+                    "choiceText": "Use natural dyes",
                     "profitChange": -4000,
                     "populationChange": 100000000,
                     "pollutionChange": -4,
                     "stockChange": 12
                 },
                 {
-                    "choiceText": "Aggressive growth: Sell 'Rainbow Bird' merchandise",
+                    "choiceText": "Sell 'Rainbow Bird' merchandise",
                     "profitChange": 25000,
                     "populationChange": -50000000,
                     "pollutionChange": 8,
@@ -232,14 +232,14 @@
             "questionText": "Your Smart Pillow waste is creating its own weather. How do you respond?",
             "choices": [
                 {
-                    "choiceText": "Ethical path: Switch to sustainable materials",
+                    "choiceText": "Switch to sustainable materials",
                     "profitChange": -8000,
                     "populationChange": 100000000,
                     "pollutionChange": -8,
                     "stockChange": 12
                 },
                 {
-                    "choiceText": "Aggressive growth: Sell 'Pillow Weather' bottled air",
+                    "choiceText": "Sell 'Pillow Weather' bottled air",
                     "profitChange": 20000,
                     "populationChange": -50000000,
                     "pollutionChange": 8,
@@ -251,14 +251,14 @@
             "questionText": "Your Smart Water Bottle caps are forming a new ocean. Dolphins are using them as currency. What's your plan?",
             "choices": [
                 {
-                    "choiceText": "Ethical path: Use recycled materials",
+                    "choiceText": "Use recycled materials",
                     "profitChange": -4000,
                     "populationChange": 100000000,
                     "pollutionChange": -4,
                     "stockChange": 12
                 },
                 {
-                    "choiceText": "Aggressive growth: Sell 'Dolphin Economy' merchandise",
+                    "choiceText": "Sell 'Dolphin Economy' merchandise",
                     "profitChange": 25000,
                     "populationChange": -50000000,
                     "pollutionChange": 8,
@@ -270,14 +270,14 @@
             "questionText": "Your Smart Umbrella is making the rain glow. People are using it as night lights. How do you handle this?",
             "choices": [
                 {
-                    "choiceText": "Ethical path: Use safe materials",
+                    "choiceText": "Use safe materials",
                     "profitChange": -8000,
                     "populationChange": 100000000,
                     "pollutionChange": -8,
                     "stockChange": 12
                 },
                 {
-                    "choiceText": "Aggressive growth: Sell 'Glow Rain' bottled water",
+                    "choiceText": "Sell 'Glow Rain' bottled water",
                     "profitChange": 20000,
                     "populationChange": -50000000,
                     "pollutionChange": 8,
@@ -289,14 +289,14 @@
             "questionText": "Your Smart Backpack factory smoke created a new ozone layer. How do you handle this?",
             "choices": [
                 {
-                    "choiceText": "Ethical path: Install air filters",
+                    "choiceText": "Install air filters",
                     "profitChange": -4000,
                     "populationChange": 100000000,
                     "pollutionChange": -4,
                     "stockChange": 12
                 },
                 {
-                    "choiceText": "Aggressive growth: Sell 'New Ozone' bottled air",
+                    "choiceText": "Sell 'New Ozone' bottled air",
                     "profitChange": 25000,
                     "populationChange": -50000000,
                     "pollutionChange": 8,
@@ -308,14 +308,14 @@
             "questionText": "Your Smart Watch batteries formed a new moon. Astronauts are vacationing there. What's your strategy?",
             "choices": [
                 {
-                    "choiceText": "Ethical path: Switch to solar power",
+                    "choiceText": "Switch to solar power",
                     "profitChange": -8000,
                     "populationChange": 100000000,
                     "pollutionChange": -8,
                     "stockChange": 12
                 },
                 {
-                    "choiceText": "Aggressive growth: Sell 'Battery Moon' vacation packages",
+                    "choiceText": "Sell 'Battery Moon' vacation packages",
                     "profitChange": 20000,
                     "populationChange": -50000000,
                     "pollutionChange": 8,
@@ -327,14 +327,14 @@
             "questionText": "Your Smart Shoes factory is polluting the river. Fish are wearing shoes. How do you respond?",
             "choices": [
                 {
-                    "choiceText": "Ethical path: Clean the river",
+                    "choiceText": "Clean the river",
                     "profitChange": -4000,
                     "populationChange": 100000000,
                     "pollutionChange": -4,
                     "stockChange": 12
                 },
                 {
-                    "choiceText": "Aggressive growth: Sell 'Fish Fashion' merchandise",
+                    "choiceText": "Sell 'Fish Fashion' merchandise",
                     "profitChange": 25000,
                     "populationChange": -50000000,
                     "pollutionChange": 8,
@@ -346,14 +346,14 @@
             "questionText": "Your Smart Glasses waste made the landfill sentient. How do you handle this?",
             "choices": [
                 {
-                    "choiceText": "Ethical path: Implement recycling",
+                    "choiceText": "Implement recycling",
                     "profitChange": -8000,
                     "populationChange": 100000000,
                     "pollutionChange": -8,
                     "stockChange": 12
                 },
                 {
-                    "choiceText": "Aggressive growth: Sell 'Sentient Landfill' merchandise",
+                    "choiceText": "Sell 'Sentient Landfill' merchandise",
                     "profitChange": 20000,
                     "populationChange": -50000000,
                     "pollutionChange": 8,
